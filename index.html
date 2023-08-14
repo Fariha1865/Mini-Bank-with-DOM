@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Bank</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/d519f2c1ee.js" crossorigin="anonymous"></script>
+
+    <style>
+        .error{
+           outline-color: red !important;
+          border: 2px solid rgb(248, 85, 85);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-5xl font-bold text-center mt-14 text-[#BB85AB]"><i class="fa-solid fa-money-check-dollar mr-5 text-[#D9027D]"></i>Mini <span class="text-[#68478D]">Bank</span></h1>
+
+    <section class="p-1 md:p-0 mt-14 ">
+    <div class="md:max-w-3xl rounded-lg md:mx-auto bg-[#BB85AB] flex flex-col justify-center items-center md:flex-row md:items-center pr-2 md:pr-10 ml-4 relative">
+        
+        <div id="input_parent" class="flex flex-col items-center md:items-start justify-center py-20 px-10 gap-5 relative">
+        <h2 class="font-bold">Please Login</h2>
+        <input type="text" id="email" placeholder="Your Email" class="rounded-lg w-96 h-10 p-5 outline-[#68478D]">
+        <input type="password" id="pass" placeholder="Password" class="rounded-lg w-96 h-10 p-5 outline-[#68478D]">
+        <i class="fa-solid fa-eye absolute left-96 top-48 mt-1 hover:cursor-pointer" id="eye-open"></i>
+        <i class="fa-solid fa-eye-slash absolute left-96 top-48 mt-1 hidden hover:cursor-pointer" id="eye-close"></i>
+
+        <button id="btn_login" class="btn w-28 bg-[#68478D] text-white border-none hover:bg-[#68478D]" >Login</button>
+    </div>
+    <div class="h-44">
+        <img src="img/bank.jpg" alt="" class="h-full">
+    </div>
+    </div>
+</section>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
+<!-- border border-solid border-red-700 -->
