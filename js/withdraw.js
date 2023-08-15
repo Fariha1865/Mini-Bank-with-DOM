@@ -16,7 +16,7 @@ document.getElementById('btn_withdraw').addEventListener('click',function(){
     }else if(withdrawAmount < 0)
     {
       withdrawInput.value = '';
-      alert('You cannot enter negative amount to deposit');
+      alert('You cannot enter negative amount to withdraw');
       return;
     }else if(isNaN(withdrawAmount))
     {
