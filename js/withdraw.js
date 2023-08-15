@@ -1,52 +1,38 @@
 //...................................Withdraw.....................................
 
-const withdrawBoxValue = document.getElementById('withdraw_Box_Value')
-const balanceBoxValue2 = document.getElementById('balance_Box_Value')
-
 document.getElementById('btn_withdraw').addEventListener('click',function(){
-  
-    const withdrawInput = document.getElementById('withdraw_input');
-    var withdrawAmount = withdrawInput.value;
-  
-    if(withdrawAmount == '')
-    {
-      alert('Please enter some amount to withdraw')
-      return;
-  
-    }else if(withdrawAmount < 0)
-    {
-      withdrawInput.value = '';
-      alert('You cannot enter negative amount to withdraw');
-      return;
-    }else if(isNaN(withdrawAmount))
-    {
-      alert('Please enter valid amount to withdraw');
-      withdrawInput.value = '';
-      return;
 
-    }
-    
-    var withdrawTotal = parseFloat(withdrawBoxValue.innerText)
-    var balanceTotal = parseFloat(balanceBoxValue2.innerText)
-    balanceTotal -= parseFloat(withdrawAmount)
-    if(balanceTotal <0)
-    {
-      alert("Insufficient balance. You can't withdraw now. Please Deposit First");
-      withdrawInput.value = '';
-      return;
-    }
+          
+  const returned = errorHandle('withdraw_input',"withdraw")
 
+  if(returned==0)
+  {return}
+  var NewWithdraw = Input('withdraw_input')
+  var previousWithdraw = PreviousAmount('withdraw_Box_Value')
+  var previousTotalBalance = PreviousAmount('balance_Box_Value')
+
+  var TotalWithdraw = previousWithdraw + NewWithdraw;
+
+
+  var Total = previousTotalBalance - NewWithdraw;
+  if(Total <0)
+  {
+    alert("Insufficient balance. You can't withdraw now. Please Deposit First");
+    Input.value = '';
+    return;
+  }
+ 
+  if(TotalWithdraw.toString().includes('.'))
+  {
+      assignNewValue('balance_Box_Value',Total.toFixed('2'));
     
-    withdrawTotal += parseFloat(withdrawAmount)
-    if(withdrawTotal.toString().includes('.'))
-    {
-        balanceBoxValue2.innerText = balanceTotal.toFixed('2');
-    }else{
-        balanceBoxValue2.innerText = balanceTotal;
-    }
-    withdrawBoxValue.innerText = withdrawTotal;
-  
-    withdrawInput.value = '';
+  }else{
+    assignNewValue('balance_Box_Value',Total);
+  }
+  assignNewValue('withdraw_Box_Value',TotalWithdraw);
   
   
-  })
+  
+})
+
+
