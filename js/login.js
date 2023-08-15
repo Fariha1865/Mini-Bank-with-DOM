@@ -46,11 +46,13 @@ document.getElementById('btn_login').addEventListener('click',function(){
 // .......................Email and Password validation.............................            
             if(emailValue == "fariha@gmail.com" && passValue == "meh123")
          {
-             window.location.href = 'bank.html';
+            
+            window.location.href = 'bank.html';
+           
          }
          else{
-            emailBox.value = '';
-            passBox.value = '';
+            // emailBox.value = '';
+            // passBox.value = '';
             setTimeout(function() {
                 alert("Invalid Credentials entered. Please try again");
             }, 15);
