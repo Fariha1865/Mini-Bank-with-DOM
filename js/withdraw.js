@@ -10,7 +10,7 @@ document.getElementById('btn_withdraw').addEventListener('click',function(){
   
     if(withdrawAmount == '')
     {
-      alert('Please enter some amount to deposit')
+      alert('Please enter some amount to withdraw')
       return;
   
     }else if(withdrawAmount < 0)
