@@ -16,15 +16,15 @@
 
         <div class="w-72 md:w-60 p-10 rounded-lg bg-[#F2827F] shadow-purple-500 shadow-lg">
             <h1 class="text-2xl font-semibold">Deposit</h1>
-            <h1 class="mt-3 text-5xl font-bold">$<span id="deposit_Box_Value">00</span></h1>
+            <h1 class="mt-3 text-3xl font-bold">$<span id="deposit_Box_Value">00</span></h1>
         </div>
         <div class="w-72 md:w-60   p-10 rounded-lg bg-[#E0707C] shadow-purple-500 shadow-lg">
             <h1 class="text-2xl font-semibold">Withdraw</h1>
-            <h1 class="mt-3 text-5xl font-bold">$00</h1>            
+            <h1 class="mt-3 text-3xl font-bold">$<span id="withdraw_Box_Value">00</span></h1>            
         </div>
         <div class="w-72 md:w-60  p-10 rounded-lg bg-[#D95D67] shadow-purple-500 shadow-lg">
             <h1 class="text-2xl font-semibold">Balance</h1>
-            <h1 class="mt-3 text-5xl font-bold">$<span id="balance_Box_Value">1200</span></h1>           
+            <h1 class="mt-3 text-3xl font-bold">$<span id="balance_Box_Value">1200</span></h1>           
         </div>
     </div>
     <!-- Inputs Container -->
@@ -34,12 +34,12 @@
         <div class="w-72 md:w-96 p-10 rounded-lg bg-[#F2827F] flex flex-col gap-2 shadow-purple-500 shadow-lg">
             <h1 class="text-2xl font-semibold">Please Deposit</h1>
             <input id="deposit_input" type="text" placeholder="$ Amount to Deposit" class="p-2 rounded-lg outline-[#68478D] text-black">
-            <button id="btn_deposite" class="btn w-36 bg-[#68478D] text-white border-none hover:bg-[#994249]">Deposit</button>
+            <button id="btn_deposit" class="btn w-36 bg-[#68478D] text-white border-none hover:bg-[#994249]">Deposit</button>
         </div>
         <div class="w-72 md:w-96   p-10 rounded-lg bg-[#E0707C] flex flex-col gap-2 shadow-purple-500 shadow-lg">
             <h1 class="text-2xl font-semibold">Please Withdraw</h1>
-            <input type="text" placeholder="$ Amount to Withdraw" class="p-2 rounded-lg outline-[#68478D] text-black">
-            <button class="btn w-36 bg-[#68478D] text-white border-none hover:bg-[#994249]">Withdraw</button>          
+            <input id="withdraw_input" type="text" placeholder="$ Amount to Withdraw" class="p-2 rounded-lg outline-[#68478D] text-black">
+            <button id="btn_withdraw" class="btn w-36 bg-[#68478D] text-white border-none hover:bg-[#994249]">Withdraw</button>          
         </div>
     </div>
 
