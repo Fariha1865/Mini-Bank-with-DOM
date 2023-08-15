@@ -19,6 +19,12 @@ document.getElementById('btn_deposit').addEventListener('click',function(){
             depositInput.value = '';
             alert('You cannot enter negative amount to deposit');
             return;
+          }else if(isNaN(depositAmount))
+          {
+            alert('Please enter valid amount to deposit');
+            depositInput.value = '';
+            return;
+
           }
 
           var depositTotal = parseFloat(depositBoxValue.innerText)
@@ -27,7 +33,7 @@ document.getElementById('btn_deposit').addEventListener('click',function(){
         
           var balanceTotal = parseFloat(balanceBoxValue.innerText)
           balanceTotal += parseFloat(depositAmount)
-          balanceBoxValue.innerText = balanceTotal.toFixed('2');
+          balanceBoxValue.innerText = balanceTotal;
           depositInput.value = '';
           
           

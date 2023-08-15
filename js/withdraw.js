@@ -18,6 +18,12 @@ document.getElementById('btn_withdraw').addEventListener('click',function(){
       withdrawInput.value = '';
       alert('You cannot enter negative amount to deposit');
       return;
+    }else if(isNaN(withdrawAmount))
+    {
+      alert('Please enter valid amount to withdraw');
+      withdrawInput.value = '';
+      return;
+
     }
     
     var withdrawTotal = parseFloat(withdrawBoxValue.innerText)
@@ -29,9 +35,15 @@ document.getElementById('btn_withdraw').addEventListener('click',function(){
       withdrawInput.value = '';
       return;
     }
-    balanceBoxValue2.innerText = balanceTotal.toFixed('2');
+
     
     withdrawTotal += parseFloat(withdrawAmount)
+    if(withdrawTotal.toString().includes('.'))
+    {
+        balanceBoxValue2.innerText = balanceTotal.toFixed('2');
+    }else{
+        balanceBoxValue2.innerText = balanceTotal;
+    }
     withdrawBoxValue.innerText = withdrawTotal;
   
     withdrawInput.value = '';
